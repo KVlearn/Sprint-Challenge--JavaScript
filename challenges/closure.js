@@ -28,6 +28,7 @@ myFunction();
 function summation(number){
 let sum=0;
 if(number>=1){
+  /* summation func is invoked inside again until i/p parameter number >=1*/
   sum = number + summation(number-1);
 } return sum;
 }
@@ -38,7 +39,7 @@ if(number>=1){
 //      sum = sum +i
 //    } return sum;
 //   }
-console.log('Task2 Counter:')
+console.log('Closure Task2 Counter:')
 console.log(summation(4)); /* answer 10 */
 console.log(summation(0)); /* answer 0 */
 console.log(summation(1)); /* answer 1 */

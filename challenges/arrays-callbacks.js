@@ -21,7 +21,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-console.log('Request#1:')
+console.log('Request#1: String of animal name and its scientific name ')
 /*forEach item in zooAnimals Array, push specific property into displayNames*/
 zooAnimals.forEach((item)=>{
   displayNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}.`);
@@ -34,7 +34,7 @@ console.log(typeof(displayNames[2]));
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 */
 // const lowCaseAnimalNames = [];
-console.log('Request#2');
+console.log('Request#2 animal name in lowecase');
 /* Use.map for each element in zooAnimals to return lowercase of animal name*/
 const lowCaseAnimalNames = zooAnimals.map((item) =>{
   return(`${item.animal_name.toLowerCase()}`);
@@ -53,7 +53,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 // const lowPopulationAnimals = [];
-console.log('Request#3:');
+console.log('Request#3: Animals with population less than 5');
 const lowPopulationAnimals = zooAnimals.filter((item)=>{
   return (item.population < 5)
 })
@@ -75,7 +75,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 let populationTotal = 0;
-console.log('Request#4');
+console.log('Request#4 Total animal population:');
 populationTotal = zooAnimals.reduce((accum,currentValue) =>{
  return accum += currentValue.population;
 },0);
@@ -110,7 +110,7 @@ function multiply(numa,numb){
 function greeting(firstname,lastname){
   return(`Hello ${firstname} ${lastname}, nice to meet you!`);
 }
-
+console.log('Callback Task:');
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
